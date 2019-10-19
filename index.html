@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Media-Player</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/ca3c24e061.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <section class="player-wrapper">
+        <header class="horizontalFlex">
+            <button class="fas fa-chevron-left"></button>
+            <h1>Playlist - Bananas</h1>
+            <button class="fas fa-ellipsis-v"></button>
+        </header>
+        <section class="playlist-player">
+            <ul id="playlist">
+
+
+                <li class="list-item horizontalFlex" id="item0">
+                    <section class="item-thumbnail" id="item-pic0"></section>
+                    <section class="item-song-info">
+                        <h1 id="artist0">505</h1>
+                        <p id="song0">Hardsync 01l</p>
+                    </section>
+                    <button class="fas fa-play-circle"
+                        data-sound="https://archive.org/download/Relix_1996-2013-17760/Nils_505_Feske_-_15_-_Hardsync_01I.mp3"
+                        track="0"></button>
+                </li>
+
+                <li class="list-item horizontalFlex" id="item1">
+                    <section class="item-thumbnail" id="item-pic1"></section>
+                    <section class="item-song-info">
+                        <h1 id="artist1">AY Riders; Factor6</h1>
+                        <p id="song1">Bits - Intro</p>
+                    </section>
+                    <button class="fas fa-play-circle"
+                        data-sound="https://archive.org/download/ZX_Spectrum_is_Alive-4030/Factor6_-_01_-_Bits_-_Intro.mp3"
+                        track="1"></button>
+                </li>
+
+                <li class="list-item horizontalFlex" id="item2">
+                    <section class="item-thumbnail" id="item-pic2"></section>
+                    <section class="item-song-info">
+                        <h1 id="artist2">Buskerdroid</h1>
+                        <p id="song2">Blast</p>
+                    </section>
+                    <button class="fas fa-play-circle"
+                        data-sound="https://archive.org/download/Gameboy_Love_Ep-9833/Buskerdroid_-_01_-_Blast.mp3"
+                        track="2"></button>
+                </li>
+
+                <li class="list-item horizontalFlex" id="item3">
+                    <section class="item-thumbnail" id="item-pic3"></section>
+                    <section class="item-song-info">
+                        <h1 id="artist3">Rolemusic</h1>
+                        <p id="song3">Spell</p>
+                    </section>
+
+                    <button class="fas fa-play-circle"
+                        data-sound="https://archive.org/download/Straw_Fields-8753/Rolemusic_-_01_-_Spell.mp3"
+                        track="3"></button>
+
+                </li>
+
+                <li class="list-item horizontalFlex" id="item4">
+                    <section class="item-thumbnail" id="item-pic4"></section>
+                    <section class="item-song-info">
+                        <h1 id="artist4">Kupa</h1>
+                        <p id="song4">Perdido</p>
+                    </section>
+                    <button class="fas fa-play-circle"
+                        data-sound="https://archive.org/download/Bit_Pairat-8078/Kupa_-_01_-_Perdido.mp3"
+                        track="4"></button>
+                </li>
+
+                <li class="list-item horizontalFlex" id="item5">
+                    <section class="item-thumbnail" id="item-pic5"></section>
+                    <section class="item-song-info">
+                        <h1 id="artist5">Pixelord</h1>
+                        <p id="song5">Cartoon Friend</p>
+                    </section>
+                    <button class="fas fa-play-circle"
+                        data-sound="https://archive.org/download/Lucid_Freaks_pt_1-5870/Pixelord_-_01_-_Cartoon_Friend.mp3"
+                        track="5"></button>
+                </li>
+
+                <li class="list-item horizontalFlex" id="item6">
+                    <section class="item-thumbnail" id="item-pic6"></section>
+                    <section class="item-song-info">
+                        <h1 id="artist6">L'homme Manete</h1>
+                        <p id="song6">C'est basic!</p>
+                    </section>
+                    <button class="fas fa-play-circle"
+                        data-sound="https://archive.org/download/Fest-Noz_Commodore-14413/Lhomme_Manete_-_02_-_Cest_basic.mp3"
+                        track="6"></button>
+                </li>
+
+            </ul>
+
+            <main class="player-main">
+                <section id="song-image-container"></section>
+                <section class="song-info-container horizontalFlex">
+                    <button class="far fa-plus-square"></button>
+
+                    <section class="info-song item-song-info">
+                        <h1 id="info-item-artist">---------</h1>
+                        <p id="info-item-song">-----</p>
+                    </section>
+
+                    <button class="fas fa-heart"></button>
+                </section>
+
+                <section class="song-progress horizontalFlex">
+                    <small id="start-time">00:00</small>
+                    <span id="seek-obj-container">
+                        <progress id="seek-obj" value="0.0" max="1"></progress>
+                    </span>
+                    <small id="end-time">0:00</small>
+                </section>
+
+                <section class="control-buttons horizontalFlex">
+                    <button class="fas fa-redo-alt" id="repeat"></button>
+
+                    <section class="play-buttons">
+                        <button class="fas fa-backward" id="prev"></button>
+
+                        <button class="fas fa-play" id="play"></button>
+
+                        <button class="fas fa-forward" id="next"></button>
+                    </section>
+
+                    <button class="fas fa-random"></button>
+                </section>
+            </main>
+        </section>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="myScript.js"></script>
+</body>
+
+
+</html>
